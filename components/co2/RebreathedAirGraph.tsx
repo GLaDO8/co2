@@ -112,12 +112,14 @@ export function RebreathedAirGraph({ bars }: RebreathedAirGraphProps) {
         </div>
         <div className="overflow-hidden">
           <div className="min-w-fit">
-            <pre
-              aria-label="Rebreathed air percentage by ppm"
-              className="m-0 whitespace-pre font-departure text-paper-ink [font-size:var(--graph-text-fluid)] [line-height:var(--graph-line-height)]"
-            >
-              {desktopGraph}
-            </pre>
+            <figure className="m-0">
+              <figcaption className="sr-only">
+                Rebreathed air percentage by ppm
+              </figcaption>
+              <pre className="m-0 whitespace-pre font-departure text-paper-ink [font-size:var(--graph-text-fluid)] [line-height:var(--graph-line-height)]">
+                {desktopGraph}
+              </pre>
+            </figure>
             <div className="pt-2 text-center font-departure text-paper-muted [font-size:var(--graph-axis-text-fluid)] leading-5 max-[480px]:[font-size:var(--graph-axis-text-fluid-mobile)] max-[480px]:leading-4">
               ppm
             </div>
@@ -129,12 +131,14 @@ export function RebreathedAirGraph({ bars }: RebreathedAirGraphProps) {
           % rebreathed air
         </div>
         <div className="overflow-hidden">
-          <pre
-            aria-label="Rebreathed air percentage by ppm"
-            className="m-0 whitespace-pre font-departure text-paper-ink [font-size:var(--graph-text-fluid-mobile)] [line-height:var(--graph-line-height-mobile)] [letter-spacing:var(--graph-letter-spacing-mobile)]"
-          >
-            {mobileGraph}
-          </pre>
+          <figure className="m-0">
+            <figcaption className="sr-only">
+              Rebreathed air percentage by ppm
+            </figcaption>
+            <pre className="m-0 whitespace-pre font-departure text-paper-ink [font-size:var(--graph-text-fluid-mobile)] [line-height:var(--graph-line-height-mobile)] [letter-spacing:var(--graph-letter-spacing-mobile)]">
+              {mobileGraph}
+            </pre>
+          </figure>
         </div>
         <div className="pt-2 text-center font-departure text-paper-muted [font-size:var(--graph-axis-text-fluid-mobile)] leading-none">
           ppm

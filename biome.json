@@ -10,7 +10,12 @@
       "components/**/*",
       "lib/**/*",
       "tests/**/*",
-      "scripts/**/*"
+      "scripts/**/*",
+      "next.config.ts",
+      "postcss.config.mjs",
+      "package.json",
+      "package-lock.json",
+      "tsconfig.json"
     ],
     "ignoreUnknown": false
   },

@@ -18,7 +18,7 @@ function createMemoryStorage(): Storage {
       store.clear();
     },
     getItem(key: string) {
-      return store.has(key) ? store.get(key)! : null;
+      return store.get(key) ?? null;
     },
     key(index: number) {
       return Array.from(store.keys())[index] ?? null;

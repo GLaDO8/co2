@@ -29,19 +29,24 @@ export function TimelineCard({ card }: TimelineCardProps) {
         </h2>
       </header>
       <div className="space-y-3 px-2 py-2">
-        {card.body?.map((paragraph, index) =>
-          typeof paragraph === "string" ? (
-            <BodyParagraph key={index}>
+        {card.body?.map((paragraph, index) => {
+          const key =
+            typeof paragraph === "string"
+              ? `${card.title}-${paragraph.slice(0, 32)}-${index}`
+              : (paragraph.key ?? `${card.title}-node-${index}`);
+
+          return typeof paragraph === "string" ? (
+            <BodyParagraph key={key}>
               {paragraph}
               {card.citationArrowParagraph === index ? <CitationArrow /> : null}
             </BodyParagraph>
           ) : (
-            <div key={index}>
+            <div key={key}>
               {paragraph}
               {card.citationArrowParagraph === index ? <CitationArrow /> : null}
             </div>
-          )
-        )}
+          );
+        })}
         {card.bullets ? <MonoBullets items={card.bullets} /> : null}
         {card.accordion ? (
           <div className="pt-2">

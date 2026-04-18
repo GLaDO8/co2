@@ -38,5 +38,5 @@ export type PlaceCardData = {
   range: string;
   imageSrc: string;
   imageAlt: string;
-  imageBackground: string;
+  imageBackgroundClassName: string;
 };

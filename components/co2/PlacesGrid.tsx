@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { PlaceCardData } from "./types";
 
 type PlacesGridProps = {
@@ -16,10 +17,9 @@ function PlaceCard({ place }: { place: PlaceCardData }) {
         </span>
       </header>
       <div
-        className="border border-paper-border"
-        style={{ backgroundColor: place.imageBackground }}
+        className={`border border-paper-border ${place.imageBackgroundClassName}`}
       >
-        <img
+        <Image
           src={place.imageSrc}
           alt={place.imageAlt}
           width={351}
