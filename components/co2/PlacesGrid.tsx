@@ -17,7 +17,7 @@ function PlaceCard({ place }: { place: PlaceCardData }) {
         </span>
       </header>
       <div
-        className={`border border-paper-border ${place.imageBackgroundClassName}`}
+        className={`m-2 ${place.imageBackgroundClassName}`}
       >
         <Image
           src={place.imageSrc}
