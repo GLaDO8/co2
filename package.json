@@ -2,6 +2,9 @@
   "name": "co2-paper-implementation",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20 <25"
+  },
   "scripts": {
     "dev": "next dev --hostname localhost",
     "build": "next build",

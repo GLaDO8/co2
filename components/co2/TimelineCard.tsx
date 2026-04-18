@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { isValidElement, type ReactNode } from "react";
 import { Accordion } from "./Accordion";
 import { CitationArrow } from "./CitationArrow";
 import { MonoBullets } from "./MonoBullets";
@@ -33,7 +33,9 @@ export function TimelineCard({ card }: TimelineCardProps) {
           const key =
             typeof paragraph === "string"
               ? `${card.title}-${paragraph.slice(0, 32)}-${index}`
-              : (paragraph.key ?? `${card.title}-node-${index}`);
+              : isValidElement(paragraph) && paragraph.key != null
+                ? String(paragraph.key)
+                : `${card.title}-node-${index}`;
 
           return typeof paragraph === "string" ? (
             <BodyParagraph key={key}>
