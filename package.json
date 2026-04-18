@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=20 <25"
+    "node": ">=20.9"
   },
   "scripts": {
     "dev": "next dev --hostname localhost",
@@ -17,16 +17,16 @@
     "check": "biome check --write ."
   },
   "dependencies": {
-    "next": "15.3.1",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "next": "^16.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.12",
     "@tailwindcss/postcss": "4.1.4",
     "@types/node": "22.14.1",
-    "@types/react": "19.1.2",
-    "@types/react-dom": "19.1.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
     "tailwindcss": "4.1.4",
     "typescript": "5.8.3"
   }

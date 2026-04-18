@@ -5,11 +5,11 @@ import test from "node:test";
 
 const rootDir = process.cwd();
 
-test("package.json excludes the broken Node 25 runtime", () => {
+test("package.json allows modern supported Node runtimes", () => {
   const packageJsonPath = path.join(rootDir, "package.json");
   const packageJson = JSON.parse(readFileSync(packageJsonPath, "utf8"));
 
-  assert.equal(packageJson.engines.node, ">=20 <25");
+  assert.equal(packageJson.engines.node, ">=20.9");
 });
 
 test("root layout does not install a storage shim", () => {
