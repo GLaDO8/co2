@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# Biome Accessibility Linter Pre-Commit Hook
+# 
+# This hook runs Biome linter with full accessibility checks before allowing commits.
+# It ensures all a11y rules pass before code is committed.
+#
+# To install this hook, run:
+#   git config core.hooksPath .githooks
+#
+# Or manually copy to .git/hooks/pre-commit and make executable:
+#   cp .githooks/pre-commit .git/hooks/pre-commit
+#   chmod +x .git/hooks/pre-commit
+#
+
+echo "🔍 Running Biome accessibility linter..."
+
+# Run Biome linter with error-on-warnings for a11y
+# This will block commits if any accessibility errors are found
+npx @biomejs/biome lint --error-on-warnings .
+
+# Store exit code
+RESULT=$?
+
+if [ $RESULT -ne 0 ]; then
+    echo ""
+    echo "❌ Accessibility linting failed!"
+    echo "   Please fix the issues above before committing."
+    echo ""
+    echo "   To auto-fix safe issues, run: npm run lint:fix"
+    echo "   To see all issues: npm run lint"
+    echo ""
+    exit 1
+fi
+
+echo "✅ All accessibility checks passed!"
+exit 0

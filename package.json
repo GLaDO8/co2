@@ -1,0 +1,30 @@
+{
+  "name": "co2-paper-implementation",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname localhost",
+    "build": "next build",
+    "start": "next start --hostname localhost",
+    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint --write .",
+    "lint:fix:unsafe": "biome lint --write --unsafe .",
+    "format": "biome format --write .",
+    "check": "biome check --write ."
+  },
+  "dependencies": {
+    "next": "15.3.1",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
+    "@tailwindcss/postcss": "4.1.4",
+    "@types/node": "22.14.1",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "tailwindcss": "4.1.4",
+    "typescript": "5.8.3"
+  }
+}
