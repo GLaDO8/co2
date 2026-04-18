@@ -1,4 +1,4 @@
-import { CitationArrow } from "@/components/co2/CitationArrow";
+import { CitationArrow, citations } from "@/components/co2/CitationArrow";
 import { Frame } from "@/components/co2/Frame";
 import { HeroMolecule } from "@/components/co2/HeroMolecule";
 import { MonoBullets } from "@/components/co2/MonoBullets";
@@ -73,9 +73,9 @@ export default function Page() {
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 In fact, there are studies showing that CO₂ is a useful proxy
                 for SARS-CoV-2 risk in shared indoor air
-                <CitationArrow />. Keeping CO₂ as low as possible reduces the
-                amount of rebreathed air you share with everyone else in the
-                room.
+                <CitationArrow citation={citations.covidProxy} />. Keeping CO₂
+                as low as possible reduces the amount of rebreathed air you
+                share with everyone else in the room.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 Okay, but how do you make sense of what 5,000 ppm means? Read
@@ -97,6 +97,12 @@ export default function Page() {
                 explanation for every headache, sleepy feeling, or drop in
                 performance.
               </p>
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                A newer crossover study also found that exposure near 5,000 ppm
+                shortened sleep latency and increased subjective sleepiness in
+                healthy volunteers
+                <CitationArrow citation={citations.sleepLatency} />.
+              </p>
             </SectionCard>
 
             <SectionCard title="Ventilation, occupancy and exposure duration">
@@ -112,7 +118,8 @@ export default function Page() {
                 range, but the path there is different. Higher occupancy raises
                 CO₂ faster, weak ventilation clears it more slowly, and longer
                 exposure gives your body more time to feel the effects and your
-                infection risk more time to compound <CitationArrow />.
+                infection risk more time to compound
+                <CitationArrow citation={citations.covidProxy} />.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 That is why the same 1,500 ppm reading feels much worse in a
@@ -148,6 +155,8 @@ export default function Page() {
                     imageAlt="Dithered crowd in a club."
                     imageBackgroundClassName="bg-[#3D4005]"
                     description="A crowded club can soon get hot and humid with elevated levels of CO₂, sometimes reaching 9,000+ ppm."
+                    imageWidth={1404}
+                    imageHeight={1052}
                   />
                   <PlaceCard
                     title="Closed meeting rooms"
@@ -156,8 +165,8 @@ export default function Page() {
                     imageAlt="Dithered meeting room."
                     imageBackgroundClassName="bg-[#282B02]"
                     description="Depending on the size of the room, long meetings can push CO₂ into a range where the room starts to feel stale and heavy."
-                    imageContainerClassName="h-[267px]"
-                    imageClassName="object-contain scale-110"
+                    imageWidth={1404}
+                    imageHeight={1068}
                   />
                   <PlaceCard
                     title="Gyms"
@@ -166,8 +175,8 @@ export default function Page() {
                     imageAlt="Dithered gym scene."
                     imageBackgroundClassName="bg-[#282B02]"
                     description="A crowded gym with dozens of people exhaling at elevated heart rates. Ventilation matters fast in spaces like this."
-                    imageContainerClassName="h-[267px]"
-                    imageClassName="object-contain scale-110"
+                    imageWidth={1404}
+                    imageHeight={1068}
                   />
                   <PlaceCard
                     title="Closed bedrooms"
@@ -176,8 +185,8 @@ export default function Page() {
                     imageAlt="Dithered bedroom."
                     imageBackgroundClassName="bg-[#36390E]"
                     description="Overnight, CO₂ can rise steadily if there is no fresh air circulating in the room, disturbing your sleep."
-                    imageContainerClassName="h-[267px]"
-                    imageClassName="object-contain scale-108"
+                    imageWidth={1404}
+                    imageHeight={1068}
                   />
                 </div>
 
@@ -189,8 +198,8 @@ export default function Page() {
                     imageAlt="Dithered airplane."
                     imageBackgroundClassName="bg-[#36390E]"
                     description="Flights usually have abundant fresh air mixed with filtered air in the cabin. Crowding can still increase CO₂, but usually only to higher levels on long flights. Cabin humidity is also very low, which is why your mouth and lips dry out."
-                    imageContainerClassName="h-[267px]"
-                    imageClassName="object-contain scale-108"
+                    imageWidth={1404}
+                    imageHeight={1068}
                   />
                   <PlaceCard
                     title="Buses (decent crowd)"
@@ -199,6 +208,8 @@ export default function Page() {
                     imageAlt="Dithered bus."
                     imageBackgroundClassName="bg-[#282B02]"
                     description="Short bus commutes are usually fine, but overnight bus journeys can be much more problematic."
+                    imageWidth={1404}
+                    imageHeight={1052}
                   />
                   <PlaceCard
                     title="Cars"
@@ -207,6 +218,8 @@ export default function Page() {
                     imageAlt="Dithered car."
                     imageBackgroundClassName="bg-[#282B02]"
                     description="Long car rides with closed windows, full recirculation, and multiple passengers can become surprisingly risky. Read on."
+                    imageWidth={1404}
+                    imageHeight={1052}
                   />
                 </div>
               </div>
@@ -234,7 +247,7 @@ export default function Page() {
                 decision-making scores as CO₂ rose, but the literature is not
                 settled and it is hard to separate CO₂ itself from heat,
                 ventilation, odors, sleepiness, and the general misery of a
-                stale room <CitationArrow />.
+                stale room.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 What people often notice first is the room itself feeling bad.
@@ -262,7 +275,7 @@ export default function Page() {
                 recirculation studies found full recirculation can drive cabin
                 CO₂ to around 3,000 ppm, while allowing some fresh air keeps
                 CO₂ much lower without giving up all the particle protection
-                <CitationArrow />.
+                <CitationArrow citation={citations.vehicleAccumulation} />.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 The practical rule is simple: full recirculation is useful
@@ -290,7 +303,8 @@ export default function Page() {
               />
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 Personal fixes help, but the real solution is ventilation that
-                matches the occupancy of the room <CitationArrow />.
+                matches the occupancy of the room
+                <CitationArrow citation={citations.covidProxy} />.
               </p>
             </SectionCard>
           </section>

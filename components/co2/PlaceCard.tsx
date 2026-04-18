@@ -7,8 +7,8 @@ type PlaceCardProps = {
   imageAlt: string;
   imageBackgroundClassName: string;
   description: string;
-  imageClassName?: string;
-  imageContainerClassName?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 export function PlaceCard({
@@ -18,8 +18,8 @@ export function PlaceCard({
   imageAlt,
   imageBackgroundClassName,
   description,
-  imageClassName,
-  imageContainerClassName,
+  imageWidth = 1404,
+  imageHeight = 1068,
 }: PlaceCardProps) {
   return (
     <article className="flex flex-col gap-2 border border-paper-border bg-paper-white p-2 shadow-[2px_2px_0_0_var(--color-paper-shadow)]">
@@ -31,14 +31,13 @@ export function PlaceCard({
           {range}
         </span>
       </header>
-      <div
-        className={`${imageBackgroundClassName} ${imageContainerClassName ?? "h-[263px]"} relative overflow-hidden`}
-      >
+      <div className={`${imageBackgroundClassName} overflow-hidden`}>
         <Image
           src={imageSrc}
           alt={imageAlt}
-          fill
-          className={`object-contain ${imageClassName ?? ""}`}
+          width={imageWidth}
+          height={imageHeight}
+          className="block h-auto w-full"
           sizes="(max-width: 767px) 100vw, 352px"
         />
       </div>
