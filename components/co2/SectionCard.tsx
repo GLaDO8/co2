@@ -21,7 +21,7 @@ export function SectionCard({
         </div>
       </div>
       <div
-        className={`flex flex-col gap-3 px-2 py-2 ${contentClassName ?? ""}`}
+        className={`flex flex-col gap-5 px-2 py-2 ${contentClassName ?? ""}`}
       >
         {children}
       </div>

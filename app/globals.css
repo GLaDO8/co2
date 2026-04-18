@@ -16,10 +16,11 @@
   --color-paper-lime: #ebfb54;
   --color-paper-ink: #464a16;
   --color-paper-border: #33370c;
-  --color-paper-shadow: #d0d7a7;
+  --color-paper-shadow: #bcbfb2;
   --color-paper-bg: #e7e6e6;
   --color-paper-white: #ffffff;
   --color-paper-muted: #777d44;
+  --color-paper-grid: #d0d6a2;
 
   --font-departure: "Departure Mono", "DepartureMono-Regular", monospace;
   --font-tx: "TX-02", "TX-02-Regular", monospace;
@@ -51,6 +52,18 @@ body {
   background: var(--color-paper-bg);
   color: var(--color-paper-ink);
   font-family: var(--font-tx);
+  text-rendering: geometricPrecision;
+}
+
+.paper-grid-bg {
+  background-color: var(--color-paper-bg);
+  background-image:
+    linear-gradient(to right, rgb(208 214 162 / 0.28) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(208 214 162 / 0.28) 1px, transparent 1px);
+  background-position:
+    max(16px, calc(50% - 376px)) 0,
+    max(16px, calc(50% - 376px)) 0;
+  background-size: 16px 16px;
 }
 
 button,

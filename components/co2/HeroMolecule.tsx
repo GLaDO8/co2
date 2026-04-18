@@ -8,6 +8,7 @@ export function HeroMolecule() {
         alt="Carbon dioxide molecule diagram with bond and oxygen callouts."
         width={616}
         height={482}
+        loading="eager"
         className="block h-auto w-full"
       />
     </figure>

@@ -1,9 +1,22 @@
 import type { Metadata } from "next";
+import { Agentation } from "agentation";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CO2 is no joke",
+  title: "CO₂ is no joke",
   description: "Paper frame implementation in Next.js",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
+  appleWebApp: {
+    title: "CO₂ is no joke",
+  },
 };
 
 export default function RootLayout({
@@ -13,7 +26,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        {process.env.NODE_ENV === "development" && (
+          <Agentation endpoint="http://localhost:4747" />
+        )}
+      </body>
     </html>
   );
 }

@@ -1,0 +1,21 @@
+{
+  "name": "CO₂ is no joke",
+  "short_name": "CO₂ is no joke",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#ebfb54",
+  "background_color": "#e7e6e6",
+  "display": "standalone"
+}

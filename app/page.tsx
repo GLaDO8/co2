@@ -9,45 +9,45 @@ import { SectionCard } from "@/components/co2/SectionCard";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-paper-bg px-4 py-10 md:px-8 md:py-[72px]">
-      <Frame title="CO2 is no joke">
-        <section className="flex flex-col gap-[15px]">
+    <main className="paper-grid-bg min-h-screen px-4 py-10 md:px-8 md:py-[72px]">
+      <Frame title="CO₂ is no joke">
+        <section className="flex flex-col gap-6 md:gap-8">
           <section className="flex flex-col gap-6 md:gap-8">
             <p className="m-0 max-w-[752px] font-tx text-[18px] leading-6 text-paper-ink">
               Carbon dioxide is commonly known for its macro effects as a
               greenhouse gas, but most people are not aware of what elevated
-              indoor CO2 does to an individual. Let&apos;s explore.
+              indoor CO₂ can tell you about ventilation and shared indoor air.
+              Let&apos;s explore.
             </p>
             <HeroMolecule />
           </section>
 
-          <section className="flex flex-col gap-[15px]">
+          <section className="flex flex-col gap-6 md:gap-8">
             <SectionCard title="What is normal?">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Outside air contains anywhere between 400-500 ppm of CO2. ppm
+                Outside air contains anywhere between 400-500 ppm of CO₂. ppm
                 is parts per million, or how many units of something exist
                 within a million units.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                At these levels, your brain is at peak performance, cerebral
-                blood flow is smooth and blood pH is balanced. This is the air
-                we evolved to breathe.
+                At these levels, CO₂ itself is not the story. This is roughly
+                the outdoor baseline most indoor readings are compared against.
               </p>
             </SectionCard>
 
-            <SectionCard title="CO2 and airborne infection risk">
+            <SectionCard title="CO₂ and airborne infection risk">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                The correlation between CO2 concentration and risk of airborne
+                The correlation between CO₂ concentration and risk of airborne
                 diseases is well-established.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                CO2 is mainly a ventilation and rebreathed-air indicator, not a
-                complete picture of air quality. High indoor CO2 usually means
+                CO₂ is mainly a ventilation and rebreathed-air indicator, not a
+                complete picture of air quality. High indoor CO₂ usually means
                 that a higher fraction of what you are breathing was already in
                 someone else&apos;s lungs.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Humans exhale CO2 at around 40,000 ppm. As indoor air gets
+                Humans exhale CO₂ at around 40,000 ppm. As indoor air gets
                 stale, that pushes up the odds of transmission for respiratory
                 infections between humans.
               </p>
@@ -57,8 +57,8 @@ export default function Page() {
               </p>
               <RebreathedAirFormula />
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                If we plot this for various CO2 concentrations, the exposure
-                risk climbs fast as CO2 accumulates.
+                If we plot this for various CO₂ concentrations, the exposure
+                risk climbs fast as CO₂ accumulates.
               </p>
               <RebreathedAirGraph
                 bars={[
@@ -71,9 +71,9 @@ export default function Page() {
                 ]}
               />
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                In fact, there are studies showing that CO2 is a useful proxy
+                In fact, there are studies showing that CO₂ is a useful proxy
                 for SARS-CoV-2 risk in shared indoor air
-                <CitationArrow />. Keeping CO2 as low as possible reduces the
+                <CitationArrow />. Keeping CO₂ as low as possible reduces the
                 amount of rebreathed air you share with everyone else in the
                 room.
               </p>
@@ -83,23 +83,25 @@ export default function Page() {
               </p>
             </SectionCard>
 
-            <SectionCard title="What does CO2 physiologically do?">
+            <SectionCard title="What does CO₂ physiologically do?">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                CO2 is a vasodilator. It widens blood vessels and increases
-                blood flow in your brain, which can raise pressure enough to
-                give you a mild headache, drowsiness, and confusion.
+                CO₂ is a normal part of breathing, and at very high
+                concentrations it clearly affects blood flow, acidity, and
+                symptoms. But the lower concentrations people usually encounter
+                indoors are less dramatic than a lot of internet infographics
+                suggest.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                CO2 also dissolves in blood and lowers pH. At the
-                concentrations people usually encounter indoors, this is not
-                full-blown respiratory acidosis, but it can still make that
-                heavy, sleepy feeling worse.
+                At ordinary indoor levels, CO₂ is often more useful as a marker
+                of low ventilation and rebreathed air than as a fully proven
+                explanation for every headache, sleepy feeling, or drop in
+                performance.
               </p>
             </SectionCard>
 
             <SectionCard title="Ventilation, occupancy and exposure duration">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                CO2 is not just about the number on the meter. It is about how
+                CO₂ is not just about the number on the meter. It is about how
                 many people are sharing a space, how much fresh air is entering
                 it, and how long you stay there. Those three variables decide
                 how quickly rebreathed air accumulates.
@@ -108,7 +110,7 @@ export default function Page() {
                 A crowded bedroom overnight, a packed classroom for an hour, and
                 a bus commute with shut windows can all land in a similar ppm
                 range, but the path there is different. Higher occupancy raises
-                CO2 faster, weak ventilation clears it more slowly, and longer
+                CO₂ faster, weak ventilation clears it more slowly, and longer
                 exposure gives your body more time to feel the effects and your
                 infection risk more time to compound <CitationArrow />.
               </p>
@@ -121,15 +123,15 @@ export default function Page() {
 
             <section className="flex flex-col gap-4">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Below are ballpark numbers for CO2 levels in some common places
-                you breathe in. Remember that CO2 levels and their effects vary
+                Below are ballpark numbers for CO₂ levels in some common places
+                you breathe in. Remember that CO₂ levels and their effects vary
                 with ventilation, occupancy, and duration of exposure.
               </p>
 
               <div className="border border-paper-border bg-paper-white px-2 py-2 shadow-[2px_2px_0_0_var(--color-paper-shadow)]">
                 <div className="flex items-start justify-between gap-3">
                   <p className="m-0 font-departure text-[16px] leading-5 text-paper-ink">
-                    Outdoor air CO2 levels for reference
+                    Outdoor air CO₂ levels for reference
                   </p>
                   <span className="shrink-0 bg-paper-lime font-departure text-[16px] leading-5 text-paper-ink">
                     400-500 ppm
@@ -142,18 +144,18 @@ export default function Page() {
                   <PlaceCard
                     title="Clubs"
                     range="2500-9000+ ppm"
-                    imageSrc="/clubs.webp"
+                    imageSrc="/party.webp"
                     imageAlt="Dithered crowd in a club."
                     imageBackgroundClassName="bg-[#3D4005]"
-                    description="A crowded club can soon get hot and humid with elevated levels of CO2, sometimes reaching 9,000+ ppm."
+                    description="A crowded club can soon get hot and humid with elevated levels of CO₂, sometimes reaching 9,000+ ppm."
                   />
                   <PlaceCard
                     title="Closed meeting rooms"
                     range="1500-2500 ppm"
-                    imageSrc="/meeting-room.webp"
+                    imageSrc="/meeting.webp"
                     imageAlt="Dithered meeting room."
                     imageBackgroundClassName="bg-[#282B02]"
-                    description="Depending on the size of the room, long meetings can push CO2 into a range where thinking slows down and the room starts to feel heavy."
+                    description="Depending on the size of the room, long meetings can push CO₂ into a range where the room starts to feel stale and heavy."
                     imageContainerClassName="h-[267px]"
                     imageClassName="object-contain scale-110"
                   />
@@ -163,7 +165,7 @@ export default function Page() {
                     imageSrc="/gym.webp"
                     imageAlt="Dithered gym scene."
                     imageBackgroundClassName="bg-[#282B02]"
-                    description="A crowded gym with dozens of people exhaling at elevated heart rates. You know where this is going."
+                    description="A crowded gym with dozens of people exhaling at elevated heart rates. Ventilation matters fast in spaces like this."
                     imageContainerClassName="h-[267px]"
                     imageClassName="object-contain scale-110"
                   />
@@ -173,7 +175,7 @@ export default function Page() {
                     imageSrc="/bedroom.webp"
                     imageAlt="Dithered bedroom."
                     imageBackgroundClassName="bg-[#36390E]"
-                    description="Overnight, CO2 can rise steadily if there is no fresh air circulating in the room, disturbing your sleep."
+                    description="Overnight, CO₂ can rise steadily if there is no fresh air circulating in the room, disturbing your sleep."
                     imageContainerClassName="h-[267px]"
                     imageClassName="object-contain scale-108"
                   />
@@ -183,17 +185,17 @@ export default function Page() {
                   <PlaceCard
                     title="Airplanes"
                     range="1500-2500 ppm"
-                    imageSrc="/airplane-updated.webp"
+                    imageSrc="/airplane.webp"
                     imageAlt="Dithered airplane."
                     imageBackgroundClassName="bg-[#36390E]"
-                    description="Flights usually have abundant fresh air mixed with filtered air in the cabin. Crowding can still increase CO2, but usually only to higher levels on long flights. Cabin humidity is also very low, which is why your mouth and lips dry out."
+                    description="Flights usually have abundant fresh air mixed with filtered air in the cabin. Crowding can still increase CO₂, but usually only to higher levels on long flights. Cabin humidity is also very low, which is why your mouth and lips dry out."
                     imageContainerClassName="h-[267px]"
                     imageClassName="object-contain scale-108"
                   />
                   <PlaceCard
                     title="Buses (decent crowd)"
                     range="1500-2500 ppm"
-                    imageSrc="/bus-updated.webp"
+                    imageSrc="/bus.webp"
                     imageAlt="Dithered bus."
                     imageBackgroundClassName="bg-[#282B02]"
                     description="Short bus commutes are usually fine, but overnight bus journeys can be much more problematic."
@@ -201,7 +203,7 @@ export default function Page() {
                   <PlaceCard
                     title="Cars"
                     range="1500-2500 ppm"
-                    imageSrc="/car-updated.webp"
+                    imageSrc="/car.webp"
                     imageAlt="Dithered car."
                     imageBackgroundClassName="bg-[#282B02]"
                     description="Long car rides with closed windows, full recirculation, and multiple passengers can become surprisingly risky. Read on."
@@ -215,44 +217,51 @@ export default function Page() {
               </p>
             </section>
 
-            <SectionCard title="Effects on cognition">
+            <SectionCard title="CO₂ and cognition">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 You&apos;re in a packed meeting room. Someone closed the door 30
-                minutes ago. Humans exhale CO2 at 40,000 ppm. With little fresh
+                minutes ago. Humans exhale CO₂ at 40,000 ppm. With little fresh
                 air entering the room, you&apos;re gradually inhaling what others
                 have exhaled, about 1% of what you breathe.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                % rebreathed air = (indoor_co2 - outdoor_co2)/(exhaled_co2 -
-                outdoor_co2)
+                % rebreathed air = (indoor_co₂ - outdoor_co₂)/(exhaled_co₂ -
+                outdoor_co₂)
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Cognitive impairment has started to creep in. Controlled studies
-                found about a 15% drop in cognitive scores around this range
-                <CitationArrow />. Physical symptoms begin here. You might feel:
+                The evidence for direct cognitive effects from typical indoor
+                CO₂ levels is mixed. Some controlled studies reported lower
+                decision-making scores as CO₂ rose, but the literature is not
+                settled and it is hard to separate CO₂ itself from heat,
+                ventilation, odors, sleepiness, and the general misery of a
+                stale room <CitationArrow />.
+              </p>
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                What people often notice first is the room itself feeling bad.
+                You might feel:
               </p>
               <MonoBullets
                 items={[
-                  { text: "Subtle fatigue" },
-                  { text: "Slight headache" },
-                  { text: "Heaviness in the room" },
+                  { text: "Sleepy or drained" },
+                  { text: "A mild headache" },
+                  { text: "That stale-room heaviness" },
                 ]}
               />
             </SectionCard>
 
-            <SectionCard title="CO2 and car rides">
+            <SectionCard title="CO₂ and car rides">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 Cars are a nasty tradeoff. Recirculation helps keep traffic
-                particles and fumes out, but it also lets exhaled CO2 build very
+                particles and fumes out, but it also lets exhaled CO₂ build very
                 quickly inside a small cabin.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Experimental vehicle studies found cabin CO2 can reach roughly
+                Experimental vehicle studies found cabin CO₂ can reach roughly
                 1,500 ppm within about 20 minutes with one occupant, and around
                 3,000 ppm within the same time with two occupants. Separate
                 recirculation studies found full recirculation can drive cabin
-                CO2 to around 3,000 ppm, while allowing some fresh air keeps CO2
-                much lower without giving up all the particle protection
+                CO₂ to around 3,000 ppm, while allowing some fresh air keeps
+                CO₂ much lower without giving up all the particle protection
                 <CitationArrow />.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
@@ -275,7 +284,7 @@ export default function Page() {
                   { text: "Open windows for cross-ventilation whenever possible" },
                   { text: "Avoid long stays in small crowded rooms" },
                   { text: "Use car recirculation briefly, not for whole rides" },
-                  { text: "Use a CO2 monitor if you spend time indoors for work" },
+                  { text: "Use a CO₂ monitor if you spend time indoors for work" },
                 ]}
                 compact
               />
