@@ -44,7 +44,7 @@ export function PlaceCard({
           sizes="(max-width: 767px) 100vw, 352px"
         />
       </div>
-      <p className="m-0 px-1 pb-1 font-tx text-[16px] leading-[22px] text-paper-ink">
+      <p className="m-0 px-1 pb-1 font-geist text-[16px] leading-[22px] text-paper-ink">
         {description}
       </p>
     </article>

@@ -14,7 +14,7 @@ export default function Page() {
       <Frame title="CO₂ is no joke">
         <section className="flex flex-col gap-6 md:gap-8">
           <section className="flex flex-col gap-6 md:gap-8">
-            <p className="m-0 max-w-[752px] font-tx text-[18px] leading-6 text-paper-ink">
+            <p className="m-0 max-w-[752px] font-geist text-[18px] leading-6 text-paper-ink">
               Carbon dioxide is commonly known for its macro effects as a
               greenhouse gas, but most people are not aware of what elevated
               indoor CO₂ can tell you about ventilation and shared indoor air.
@@ -25,19 +25,19 @@ export default function Page() {
 
           <section className="flex flex-col gap-6 md:gap-8">
             <SectionCard title="What is normal?">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 Outside air contains anywhere between 400-500 ppm of CO₂. ppm is
                 parts per million, or how many units of something exist within a
                 million units.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 At these levels, CO₂ itself is not the story. This is roughly
                 the outdoor baseline most indoor readings are compared against.
               </p>
             </SectionCard>
 
             <section className="flex flex-col gap-4">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 Below are ballpark numbers for CO₂ levels in some common places
                 you breathe in. Remember that CO₂ levels and their effects vary
                 with ventilation, occupancy, and duration of exposure.
@@ -134,18 +134,18 @@ export default function Page() {
                 </div>
               </div>
 
-              <p className="m-0 font-tx text-[12px] leading-4 font-medium text-paper-ink">
+              <p className="m-0 font-geist text-[12px] leading-4 font-medium text-paper-ink">
                 Verified over multiple measurements made using an Aranet4
                 sensor.
               </p>
             </section>
 
             <SectionCard title="CO₂ and airborne infection risk">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 The correlation between CO₂ concentration and risk of airborne
                 diseases is well-established.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 CO₂ is mainly a ventilation and rebreathed-air indicator, not a
                 complete picture of air quality. High indoor CO₂ usually means
                 that a higher fraction of what you are breathing was already in
@@ -169,7 +169,7 @@ export default function Page() {
                   <RebreathedAirFormula />
                 </div>
               </Accordion>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 If we plot this for various CO₂ concentrations, the exposure
                 risk climbs fast as CO₂ accumulates.
               </p>
@@ -183,34 +183,34 @@ export default function Page() {
                   { ppm: "10,000", rebreathedAir: "24%" },
                 ]}
               />
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 In fact, there are studies showing that CO₂ is a useful proxy
                 for SARS-CoV-2 risk in shared indoor air
                 <CitationArrow citation={citations.covidProxy} />. Keeping CO₂
                 as low as possible reduces the amount of rebreathed air you
                 share with everyone else in the room.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 Okay, but how do you make sense of what 5,000 ppm means? Read
                 on, anon.
               </p>
             </SectionCard>
 
             <SectionCard title="Does CO2 itself hurt you?">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 CO₂ is a normal part of breathing, and at very high
                 concentrations it clearly affects blood flow, acidity, and
                 symptoms. But the lower concentrations people usually encounter
                 indoors are less dramatic than a lot of internet infographics
                 suggest.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 At ordinary indoor levels, CO₂ is often more useful as a marker
                 of low ventilation and rebreathed air than as a fully proven
                 explanation for every headache, sleepy feeling, or drop in
                 performance.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 The evidence for direct cognitive effects from typical indoor
                 CO₂ levels is mixed. Some controlled studies reported lower
                 decision-making scores as CO₂ rose, but the literature is not
@@ -218,7 +218,7 @@ export default function Page() {
                 ventilation, odors, sleepiness, and the general misery of a
                 stale room.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 A newer crossover study also found that exposure near 5,000 ppm
                 shortened sleep latency and increased subjective sleepiness in
                 healthy volunteers
@@ -227,13 +227,13 @@ export default function Page() {
             </SectionCard>
 
             <SectionCard title="Ventilation, occupancy and exposure duration">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 CO₂ is not just about the number on the meter. It is about how
                 many people are sharing a space, how much fresh air is entering
                 it, and how long you stay there. Those three variables decide
                 how quickly rebreathed air accumulates.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 A crowded bedroom overnight, a packed classroom for an hour, and
                 a bus commute with shut windows can all land in a similar ppm
                 range, but the path there is different. Higher occupancy raises
@@ -242,7 +242,7 @@ export default function Page() {
                 infection risk more time to compound
                 <CitationArrow citation={citations.covidProxy} />.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 That is why the same 1,500 ppm reading feels much worse in a
                 tiny sealed room than in a large space that only spiked briefly.
                 The reading matters, but the shape of the exposure matters too.
@@ -250,7 +250,7 @@ export default function Page() {
             </SectionCard>
 
             <SectionCard title="What can you do about it">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 Fresh outdoor air is the fix. If a room feels stale, crack a
                 window, open a door, step outside for a few minutes, or reduce
                 how many people are packed into the space. If you sleep in a
@@ -272,12 +272,12 @@ export default function Page() {
                 ]}
                 compact
               />
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 Cars are a nasty tradeoff. Recirculation helps keep traffic
                 particles and fumes out, but it also lets exhaled CO₂ build very
                 quickly inside a small cabin.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 Experimental vehicle studies found cabin CO₂ can reach roughly
                 1,500 ppm within about 20 minutes with one occupant, and around
                 3,000 ppm within the same time with two occupants. Separate
@@ -286,12 +286,12 @@ export default function Page() {
                 much lower without giving up all the particle protection
                 <CitationArrow citation={citations.vehicleAccumulation} />.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 The practical rule is simple: full recirculation is useful
                 briefly in heavy traffic, tunnels, or smoky air, but it is a bad
                 idea for long rides with passengers and closed windows.
               </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+              <p className="m-0 font-geist text-[18px] leading-6 text-paper-ink">
                 Personal fixes help, but the real solution is ventilation that
                 matches the occupancy of the room
                 <CitationArrow citation={citations.covidProxy} />.

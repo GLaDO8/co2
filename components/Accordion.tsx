@@ -27,19 +27,19 @@ export function Accordion({
         aria-expanded={open}
       >
         <div className="flex min-w-0 flex-1 flex-col gap-0 md:flex-row md:items-start md:gap-3">
-          <span className="font-tx text-[18px] leading-6 font-bold text-paper-ink">
+          <span className="font-geist text-[18px] leading-6 font-bold text-paper-ink">
             {title}
           </span>
-          <span className="font-tx text-[18px] leading-6 text-paper-muted">
+          <span className="font-geist text-[18px] leading-6 text-paper-muted">
             {open ? subtitle : "click to expand"}
           </span>
         </div>
-        <span className="font-tx w-6 shrink-0 text-center text-[24px] leading-6 font-semibold text-paper-ink">
+        <span className="font-geist w-6 shrink-0 text-center text-[24px] leading-6 font-semibold text-paper-ink">
           {open ? "-" : "+"}
         </span>
       </button>
       {open ? (
-        <div className="pt-2 font-tx text-[18px] leading-6 text-paper-ink">
+        <div className="pt-2 font-geist text-[18px] leading-6 text-paper-ink">
           {children}
         </div>
       ) : null}

@@ -2,14 +2,18 @@
 
 @font-face {
   font-family: "Departure Mono";
-  src: local("Departure Mono"), local("DepartureMono-Regular");
+  src: url("/fonts/DepartureMono-Regular.woff2") format("woff2");
   font-display: swap;
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-  font-family: "TX-02";
-  src: local("TX-02"), local("TX-02-Regular"), local("TX02");
+  font-family: "Geist Mono";
+  src: url("/fonts/GeistMono-VariableFont_wght.woff2") format("woff2");
   font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
 }
 
 @theme {
@@ -22,8 +26,8 @@
   --color-paper-muted: #777d44;
   --color-paper-grid: #d0d6a2;
 
-  --font-departure: "Departure Mono", "DepartureMono-Regular", monospace;
-  --font-tx: "TX-02", "TX-02-Regular", monospace;
+  --font-departure: "Departure Mono", monospace;
+  --font-geist: "Geist Mono", monospace;
 }
 
 :root {
@@ -51,7 +55,7 @@ body {
   min-height: 100vh;
   background: var(--color-paper-bg);
   color: var(--color-paper-ink);
-  font-family: var(--font-tx);
+  font-family: var(--font-geist);
   text-rendering: geometricPrecision;
 }
 
