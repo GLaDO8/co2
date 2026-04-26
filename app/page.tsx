@@ -1,12 +1,12 @@
-import { Accordion } from "@/components/co2/Accordion";
-import { CitationArrow, citations } from "@/components/co2/CitationArrow";
-import { Frame } from "@/components/co2/Frame";
-import { HeroMolecule } from "@/components/co2/HeroMolecule";
-import { MonoBullets } from "@/components/co2/MonoBullets";
-import { PlaceCard } from "@/components/co2/PlaceCard";
-import { RebreathedAirFormula } from "@/components/co2/RebreathedAirFormula";
-import { RebreathedAirGraph } from "@/components/co2/RebreathedAirGraph";
-import { SectionCard } from "@/components/co2/SectionCard";
+import { Accordion } from "@/components/Accordion";
+import { CitationArrow, citations } from "@/components/CitationArrow";
+import { Frame } from "@/components/Frame";
+import { HeroMolecule } from "@/components/HeroMolecule";
+import { MonoBullets } from "@/components/MonoBullets";
+import { PlaceCard } from "@/components/PlaceCard";
+import { RebreathedAirFormula } from "@/components/RebreathedAirFormula";
+import { RebreathedAirGraph } from "@/components/RebreathedAirGraph";
+import { SectionCard } from "@/components/SectionCard";
 
 export default function Page() {
   return (

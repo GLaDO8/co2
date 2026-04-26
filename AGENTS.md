@@ -4,12 +4,12 @@ This project is a focused Next.js App Router recreation of the "CO2 is no joke" 
 
 ## Project structure
 - `app/page.tsx` renders the single public page with inline article content and shared frame/card components.
-- `components/co2/` contains the full UI surface for this project: frame layout, section/place cards, accordion, bullets, citation arrow, formula, graph, hero image, and shared types.
+- `components/` contains the full UI surface for this project: frame layout, section/place cards, accordion, bullets, citation arrow, formula, graph, hero image, and shared types.
 - `app/globals.css` is the source of truth for the paper-themed design tokens, local font registration, and global element defaults.
 
 ## Project conventions
 - Preserve the existing paper aesthetic: lime highlight, thin borders, hard shadows, mono typography, and compact vertical rhythm.
-- Prefer extending the existing `components/co2` primitives over introducing new abstractions.
+- Prefer extending the existing `components` primitives over introducing new abstractions.
 - Keep content changes in `app/page.tsx` unless the task clearly calls for a reusable primitive.
 - Treat `app/globals.css` theme tokens as the shared palette and typography contract. Promote reusable values there before scattering repeated literals.
 - Match the current implementation style: simple typed props, small helper components in-file when local, and minimal indirection.
