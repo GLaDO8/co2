@@ -26,9 +26,9 @@ export default function Page() {
           <section className="flex flex-col gap-6 md:gap-8">
             <SectionCard title="What is normal?">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Outside air contains anywhere between 400-500 ppm of CO₂. ppm
-                is parts per million, or how many units of something exist
-                within a million units.
+                Outside air contains anywhere between 400-500 ppm of CO₂. ppm is
+                parts per million, or how many units of something exist within a
+                million units.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 At these levels, CO₂ itself is not the story. This is roughly
@@ -259,10 +259,16 @@ export default function Page() {
               </p>
               <MonoBullets
                 items={[
-                  { text: "Open windows for cross-ventilation whenever possible" },
+                  {
+                    text: "Open windows for cross-ventilation whenever possible",
+                  },
                   { text: "Avoid long stays in small crowded rooms" },
-                  { text: "Use car recirculation briefly, not for whole rides" },
-                  { text: "Use a CO₂ monitor if you spend time indoors for work" },
+                  {
+                    text: "Use car recirculation briefly, not for whole rides",
+                  },
+                  {
+                    text: "Use a CO₂ monitor if you spend time indoors for work",
+                  },
                 ]}
                 compact
               />
@@ -276,8 +282,8 @@ export default function Page() {
                 1,500 ppm within about 20 minutes with one occupant, and around
                 3,000 ppm within the same time with two occupants. Separate
                 recirculation studies found full recirculation can drive cabin
-                CO₂ to around 3,000 ppm, while allowing some fresh air keeps
-                CO₂ much lower without giving up all the particle protection
+                CO₂ to around 3,000 ppm, while allowing some fresh air keeps CO₂
+                much lower without giving up all the particle protection
                 <CitationArrow citation={citations.vehicleAccumulation} />.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
@@ -299,7 +305,7 @@ export default function Page() {
             Build by{" "}
             <a
               href="https://shrey.fyi"
-              className="underline decoration-paper-muted underline-offset-2 transition-colors hover:text-paper-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper-border"
+              className="underline decoration-paper-muted underline-offset-2 transition-colors hover:text-paper-border focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper-border"
               target="_blank"
               rel="noreferrer"
             >

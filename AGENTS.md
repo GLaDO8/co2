@@ -1,22 +1,19 @@
 # CO2 Paper Implementation
 
-This project is a focused Next.js App Router recreation of the "CO2 is no joke" paper-style layout. Most work here is either visual parity work or careful edits to the small set of timeline/card primitives that render the page.
+This project is a focused Next.js App Router recreation of the "CO2 is no joke" paper-style layout. Most work here is either visual parity work or careful edits to the small set of page/card primitives that render the page.
 
 ## Project structure
-- `app/page.tsx` renders the single public page by mapping `timelineCards` into the shared frame/card components.
-- `components/co2/` contains the full UI surface for this project: frame layout, timeline cards, accordion, bullets, citation arrow, table, data, and shared types.
+- `app/page.tsx` renders the single public page with inline article content and shared frame/card components.
+- `components/co2/` contains the full UI surface for this project: frame layout, section/place cards, accordion, bullets, citation arrow, formula, graph, hero image, and shared types.
 - `app/globals.css` is the source of truth for the paper-themed design tokens, local font registration, and global element defaults.
-- `lib/ensure-web-storage.ts` normalizes missing or malformed storage globals during server-side execution.
-- `tests/ensure-web-storage.test.mjs` covers the storage shim with the built-in Node test runner.
 
 ## Project conventions
 - Preserve the existing paper aesthetic: lime highlight, thin borders, hard shadows, mono typography, and compact vertical rhythm.
 - Prefer extending the existing `components/co2` primitives over introducing new abstractions.
-- Keep content changes in `components/co2/data.tsx` unless the task clearly requires structural component changes.
+- Keep content changes in `app/page.tsx` unless the task clearly calls for a reusable primitive.
 - Treat `app/globals.css` theme tokens as the shared palette and typography contract. Promote reusable values there before scattering repeated literals.
 - Match the current implementation style: simple typed props, small helper components in-file when local, and minimal indirection.
 - Keep the page as a server component by default. Add `"use client"` only where interactivity is required, as in the accordion.
-- When debugging server/runtime issues, remember `ensureWebStorage()` is invoked from `app/layout.tsx` before render.
 
 ## Code style and conventions
 - Simplicity first. Start with the simplest implementation then layer in complexity as needed.

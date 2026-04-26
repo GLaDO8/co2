@@ -30,7 +30,7 @@ export const citations = {
 } satisfies Record<string, CitationLink>;
 
 type CitationArrowProps = {
-  citation?: CitationLink;
+  citation: CitationLink;
 };
 
 function CitationGlyph() {
@@ -42,14 +42,6 @@ function CitationGlyph() {
 }
 
 export function CitationArrow({ citation }: CitationArrowProps) {
-  if (!citation) {
-    return (
-      <span aria-hidden="true" className="ml-1 inline-block align-middle">
-        <CitationGlyph />
-      </span>
-    );
-  }
-
   const parsedUrl = new URL(citation.url);
   const hostname = parsedUrl.hostname.replace(/^www\./, "");
   const faviconUrl = citation.faviconUrl ?? `${parsedUrl.origin}/favicon.ico`;

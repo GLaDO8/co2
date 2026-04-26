@@ -9,7 +9,7 @@
     "dev": "next dev --hostname localhost",
     "build": "next build",
     "start": "next start --hostname localhost",
-    "test": "node --experimental-strip-types --test tests/*.test.mjs",
+    "test": "node --test",
     "lint": "biome lint .",
     "lint:fix": "biome lint --write .",
     "lint:fix:unsafe": "biome lint --write --unsafe .",
