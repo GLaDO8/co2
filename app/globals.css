@@ -60,6 +60,7 @@ body {
   background-image:
     linear-gradient(to right, rgb(208 214 162 / 0.28) 1px, transparent 1px),
     linear-gradient(to bottom, rgb(208 214 162 / 0.28) 1px, transparent 1px);
+  background-attachment: fixed;
   background-position:
     max(16px, calc(50% - 376px)) 0,
     max(16px, calc(50% - 376px)) 0;

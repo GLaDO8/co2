@@ -9,7 +9,7 @@ import { SectionCard } from "@/components/co2/SectionCard";
 
 export default function Page() {
   return (
-    <main className="paper-grid-bg min-h-screen px-4 py-10 md:px-8 md:py-[72px]">
+    <main className="paper-grid-bg min-h-screen bg-fixed px-4 py-10 md:px-8 md:py-[72px]">
       <Frame title="CO₂ is no joke">
         <section className="flex flex-col gap-6 md:gap-8">
           <section className="flex flex-col gap-6 md:gap-8">
@@ -309,6 +309,20 @@ export default function Page() {
             </SectionCard>
           </section>
         </section>
+
+        <footer className="border border-paper-border bg-paper-white px-2 py-2 shadow-[2px_2px_0_0_var(--color-paper-shadow)]">
+          <p className="m-0 font-departure text-[16px] leading-5 text-paper-ink">
+            Build by{" "}
+            <a
+              href="https://shrey.fyi"
+              className="underline decoration-paper-muted underline-offset-2 transition-colors hover:text-paper-border focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-paper-border"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Shrey.fyi
+            </a>
+          </p>
+        </footer>
       </Frame>
     </main>
   );
