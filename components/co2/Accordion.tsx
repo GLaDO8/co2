@@ -1,13 +1,15 @@
 "use client";
 
 import { useState } from "react";
+import type { ReactNode } from "react";
 import { MonoBullets } from "./MonoBullets";
 import type { AccordionContent } from "./types";
 
 type AccordionProps = {
   title: string;
   subtitle: string;
-  content: AccordionContent;
+  content?: AccordionContent;
+  children?: ReactNode;
   defaultOpen?: boolean;
 };
 
@@ -15,6 +17,7 @@ export function Accordion({
   title,
   subtitle,
   content,
+  children,
   defaultOpen = true,
 }: AccordionProps) {
   const [open, setOpen] = useState(defaultOpen);
@@ -41,11 +44,19 @@ export function Accordion({
       </button>
       {open ? (
         <div className="pt-2 font-tx text-[18px] leading-6 text-paper-ink">
-          <p className="m-0">{content.intro}</p>
-          <div className="pt-1">
-            <MonoBullets items={content.bullets} compact />
-          </div>
-          {content.outro ? <p className="m-0 pt-3">{content.outro}</p> : null}
+          {children ?? (
+            <>
+              {content?.intro ? <p className="m-0">{content.intro}</p> : null}
+              {content?.bullets?.length ? (
+                <div className="pt-1">
+                  <MonoBullets items={content.bullets} compact />
+                </div>
+              ) : null}
+              {content?.outro ? (
+                <p className="m-0 pt-3">{content.outro}</p>
+              ) : null}
+            </>
+          )}
         </div>
       ) : null}
     </section>

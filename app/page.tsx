@@ -1,3 +1,4 @@
+import { Accordion } from "@/components/co2/Accordion";
 import { CitationArrow, citations } from "@/components/co2/CitationArrow";
 import { Frame } from "@/components/co2/Frame";
 import { HeroMolecule } from "@/components/co2/HeroMolecule";
@@ -35,99 +36,6 @@ export default function Page() {
               </p>
             </SectionCard>
 
-            <SectionCard title="CO₂ and airborne infection risk">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                The correlation between CO₂ concentration and risk of airborne
-                diseases is well-established.
-              </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                CO₂ is mainly a ventilation and rebreathed-air indicator, not a
-                complete picture of air quality. High indoor CO₂ usually means
-                that a higher fraction of what you are breathing was already in
-                someone else&apos;s lungs.
-              </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Humans exhale CO₂ at around 40,000 ppm. As indoor air gets
-                stale, that pushes up the odds of transmission for respiratory
-                infections between humans.
-              </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                We can calculate the percentage of rebreathed air in the room
-                using the formula below.
-              </p>
-              <RebreathedAirFormula />
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                If we plot this for various CO₂ concentrations, the exposure
-                risk climbs fast as CO₂ accumulates.
-              </p>
-              <RebreathedAirGraph
-                bars={[
-                  { ppm: "400-600", rebreathedAir: "0%" },
-                  { ppm: "1000", rebreathedAir: "1.5%" },
-                  { ppm: "1400", rebreathedAir: "2.5%" },
-                  { ppm: "2500", rebreathedAir: "5%" },
-                  { ppm: "5000", rebreathedAir: "11.5%" },
-                  { ppm: "10,000", rebreathedAir: "24%" },
-                ]}
-              />
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                In fact, there are studies showing that CO₂ is a useful proxy
-                for SARS-CoV-2 risk in shared indoor air
-                <CitationArrow citation={citations.covidProxy} />. Keeping CO₂
-                as low as possible reduces the amount of rebreathed air you
-                share with everyone else in the room.
-              </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Okay, but how do you make sense of what 5,000 ppm means? Read
-                on, anon.
-              </p>
-            </SectionCard>
-
-            <SectionCard title="What does CO₂ physiologically do?">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                CO₂ is a normal part of breathing, and at very high
-                concentrations it clearly affects blood flow, acidity, and
-                symptoms. But the lower concentrations people usually encounter
-                indoors are less dramatic than a lot of internet infographics
-                suggest.
-              </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                At ordinary indoor levels, CO₂ is often more useful as a marker
-                of low ventilation and rebreathed air than as a fully proven
-                explanation for every headache, sleepy feeling, or drop in
-                performance.
-              </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                A newer crossover study also found that exposure near 5,000 ppm
-                shortened sleep latency and increased subjective sleepiness in
-                healthy volunteers
-                <CitationArrow citation={citations.sleepLatency} />.
-              </p>
-            </SectionCard>
-
-            <SectionCard title="Ventilation, occupancy and exposure duration">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                CO₂ is not just about the number on the meter. It is about how
-                many people are sharing a space, how much fresh air is entering
-                it, and how long you stay there. Those three variables decide
-                how quickly rebreathed air accumulates.
-              </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                A crowded bedroom overnight, a packed classroom for an hour, and
-                a bus commute with shut windows can all land in a similar ppm
-                range, but the path there is different. Higher occupancy raises
-                CO₂ faster, weak ventilation clears it more slowly, and longer
-                exposure gives your body more time to feel the effects and your
-                infection risk more time to compound
-                <CitationArrow citation={citations.covidProxy} />.
-              </p>
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                That is why the same 1,500 ppm reading feels much worse in a
-                tiny sealed room than in a large space that only spiked briefly.
-                The reading matters, but the shape of the exposure matters too.
-              </p>
-            </SectionCard>
-
             <section className="flex flex-col gap-4">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 Below are ballpark numbers for CO₂ levels in some common places
@@ -157,6 +65,7 @@ export default function Page() {
                     description="A crowded club can soon get hot and humid with elevated levels of CO₂, sometimes reaching 9,000+ ppm."
                     imageWidth={1404}
                     imageHeight={1052}
+                    loading="eager"
                   />
                   <PlaceCard
                     title="Closed meeting rooms"
@@ -200,6 +109,7 @@ export default function Page() {
                     description="Flights usually have abundant fresh air mixed with filtered air in the cabin. Crowding can still increase CO₂, but usually only to higher levels on long flights. Cabin humidity is also very low, which is why your mouth and lips dry out."
                     imageWidth={1404}
                     imageHeight={1068}
+                    loading="eager"
                   />
                   <PlaceCard
                     title="Buses (decent crowd)"
@@ -230,16 +140,75 @@ export default function Page() {
               </p>
             </section>
 
-            <SectionCard title="CO₂ and cognition">
+            <SectionCard title="CO₂ and airborne infection risk">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                You&apos;re in a packed meeting room. Someone closed the door 30
-                minutes ago. Humans exhale CO₂ at 40,000 ppm. With little fresh
-                air entering the room, you&apos;re gradually inhaling what others
-                have exhaled, about 1% of what you breathe.
+                The correlation between CO₂ concentration and risk of airborne
+                diseases is well-established.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                % rebreathed air = (indoor_co₂ - outdoor_co₂)/(exhaled_co₂ -
-                outdoor_co₂)
+                CO₂ is mainly a ventilation and rebreathed-air indicator, not a
+                complete picture of air quality. High indoor CO₂ usually means
+                that a higher fraction of what you are breathing was already in
+                someone else&apos;s lungs.
+              </p>
+              <Accordion
+                title="## How the math works"
+                subtitle="click again to collapse"
+                defaultOpen={false}
+              >
+                <div className="flex flex-col gap-3">
+                  <p className="m-0">
+                    Humans exhale CO₂ at around 40,000 ppm. As indoor air gets
+                    stale, that pushes up the odds of transmission for
+                    respiratory infections between humans.
+                  </p>
+                  <p className="m-0">
+                    We can calculate the percentage of rebreathed air in the
+                    room using the formula below.
+                  </p>
+                  <RebreathedAirFormula />
+                </div>
+              </Accordion>
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                If we plot this for various CO₂ concentrations, the exposure
+                risk climbs fast as CO₂ accumulates.
+              </p>
+              <RebreathedAirGraph
+                bars={[
+                  { ppm: "400-600", rebreathedAir: "0%" },
+                  { ppm: "1000", rebreathedAir: "1.5%" },
+                  { ppm: "1400", rebreathedAir: "2.5%" },
+                  { ppm: "2500", rebreathedAir: "5%" },
+                  { ppm: "5000", rebreathedAir: "11.5%" },
+                  { ppm: "10,000", rebreathedAir: "24%" },
+                ]}
+              />
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                In fact, there are studies showing that CO₂ is a useful proxy
+                for SARS-CoV-2 risk in shared indoor air
+                <CitationArrow citation={citations.covidProxy} />. Keeping CO₂
+                as low as possible reduces the amount of rebreathed air you
+                share with everyone else in the room.
+              </p>
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                Okay, but how do you make sense of what 5,000 ppm means? Read
+                on, anon.
+              </p>
+            </SectionCard>
+
+            <SectionCard title="Does CO2 itself hurt you?">
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                CO₂ is a normal part of breathing, and at very high
+                concentrations it clearly affects blood flow, acidity, and
+                symptoms. But the lower concentrations people usually encounter
+                indoors are less dramatic than a lot of internet infographics
+                suggest.
+              </p>
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                At ordinary indoor levels, CO₂ is often more useful as a marker
+                of low ventilation and rebreathed air than as a fully proven
+                explanation for every headache, sleepy feeling, or drop in
+                performance.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 The evidence for direct cognitive effects from typical indoor
@@ -250,19 +219,53 @@ export default function Page() {
                 stale room.
               </p>
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                What people often notice first is the room itself feeling bad.
-                You might feel:
+                A newer crossover study also found that exposure near 5,000 ppm
+                shortened sleep latency and increased subjective sleepiness in
+                healthy volunteers
+                <CitationArrow citation={citations.sleepLatency} />.
+              </p>
+            </SectionCard>
+
+            <SectionCard title="Ventilation, occupancy and exposure duration">
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                CO₂ is not just about the number on the meter. It is about how
+                many people are sharing a space, how much fresh air is entering
+                it, and how long you stay there. Those three variables decide
+                how quickly rebreathed air accumulates.
+              </p>
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                A crowded bedroom overnight, a packed classroom for an hour, and
+                a bus commute with shut windows can all land in a similar ppm
+                range, but the path there is different. Higher occupancy raises
+                CO₂ faster, weak ventilation clears it more slowly, and longer
+                exposure gives your body more time to feel the effects and your
+                infection risk more time to compound
+                <CitationArrow citation={citations.covidProxy} />.
+              </p>
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                That is why the same 1,500 ppm reading feels much worse in a
+                tiny sealed room than in a large space that only spiked briefly.
+                The reading matters, but the shape of the exposure matters too.
+              </p>
+            </SectionCard>
+
+            <SectionCard title="What can you do about it">
+              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
+                Fresh outdoor air is the fix. If a room feels stale, crack a
+                window, open a door, step outside for a few minutes, or reduce
+                how many people are packed into the space. If you sleep in a
+                closed bedroom, leave a window or door slightly open when you
+                can.
               </p>
               <MonoBullets
                 items={[
-                  { text: "Sleepy or drained" },
-                  { text: "A mild headache" },
-                  { text: "That stale-room heaviness" },
+                  { text: "Open windows for cross-ventilation whenever possible" },
+                  { text: "Avoid long stays in small crowded rooms" },
+                  { text: "Use car recirculation briefly, not for whole rides" },
+                  { text: "Use a CO₂ monitor if you spend time indoors for work" },
                 ]}
+                compact
               />
-            </SectionCard>
-
-            <SectionCard title="CO₂ and car rides">
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 Cars are a nasty tradeoff. Recirculation helps keep traffic
                 particles and fumes out, but it also lets exhaled CO₂ build very
@@ -282,25 +285,6 @@ export default function Page() {
                 briefly in heavy traffic, tunnels, or smoky air, but it is a bad
                 idea for long rides with passengers and closed windows.
               </p>
-            </SectionCard>
-
-            <SectionCard title="My god, what can I do about it?">
-              <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
-                Fresh outdoor air is the fix. If a room feels stale, crack a
-                window, open a door, step outside for a few minutes, or reduce
-                how many people are packed into the space. If you sleep in a
-                closed bedroom, leave a window or door slightly open when you
-                can.
-              </p>
-              <MonoBullets
-                items={[
-                  { text: "Open windows for cross-ventilation whenever possible" },
-                  { text: "Avoid long stays in small crowded rooms" },
-                  { text: "Use car recirculation briefly, not for whole rides" },
-                  { text: "Use a CO₂ monitor if you spend time indoors for work" },
-                ]}
-                compact
-              />
               <p className="m-0 font-tx text-[18px] leading-6 text-paper-ink">
                 Personal fixes help, but the real solution is ventilation that
                 matches the occupancy of the room
