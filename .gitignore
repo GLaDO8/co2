@@ -29,3 +29,4 @@ pnpm-debug.log*
 
 # local project artifacts
 memory.json
+tmp-fonts/

@@ -17,7 +17,7 @@ export function MonoBullets({ items, compact = false }: MonoBulletsProps) {
           >
             {item.marker ?? "*"}
           </span>
-          <span className="font-geist text-[18px] leading-6 text-paper-ink">
+          <span className="font-body text-[18px] leading-6 text-paper-ink">
             {item.text}
           </span>
         </div>

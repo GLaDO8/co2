@@ -56,7 +56,7 @@ export function CitationArrow({ citation }: CitationArrowProps) {
     >
       <CitationGlyph />
       <span className="pointer-events-none absolute left-0 top-full z-20 mt-2 hidden w-[min(320px,calc(100vw-2rem))] flex-col gap-2 border border-paper-border bg-paper-white p-2 shadow-[2px_2px_0_0_var(--color-paper-shadow)] group-hover:flex group-focus-visible:flex">
-        <span className="flex items-center gap-2 font-geist text-[12px] leading-4 text-paper-muted">
+        <span className="flex items-center gap-2 font-body text-[12px] leading-4 text-paper-muted">
           {/* biome-ignore lint/performance/noImgElement: external favicons are tiny remote assets that do not benefit from Next Image here */}
           <img
             src={faviconUrl}
@@ -66,10 +66,10 @@ export function CitationArrow({ citation }: CitationArrowProps) {
           />
           <span className="truncate">{hostname}</span>
         </span>
-        <span className="font-geist text-[14px] leading-5 text-paper-ink">
+        <span className="font-body text-[14px] leading-5 text-paper-ink">
           {citation.title}
         </span>
-        <span className="font-geist text-[12px] leading-4 text-paper-muted">
+        <span className="font-body text-[12px] leading-4 text-paper-muted">
           {citation.description}
         </span>
       </span>

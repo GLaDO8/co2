@@ -9,11 +9,163 @@
 }
 
 @font-face {
-  font-family: "Geist Mono";
-  src: url("/fonts/GeistMono-VariableFont_wght.woff2") format("woff2");
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Thin.woff2") format("woff2");
   font-display: swap;
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-ExtraLight.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Light.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-SemiLight.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 350;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Regular.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Medium.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-SemiBold.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Bold.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-ExtraBold.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Black.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Thin-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-ExtraLight-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Light-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-SemiLight-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 350;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Medium-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-SemiBold-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Bold-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-ExtraBold-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: "TX-02";
+  src: url("/fonts/tx-02/TX-02-Black-Oblique.woff2") format("woff2");
+  font-display: swap;
+  font-style: oblique;
+  font-weight: 900;
 }
 
 @theme {
@@ -27,7 +179,7 @@
   --color-paper-grid: #d0d6a2;
 
   --font-departure: "Departure Mono", monospace;
-  --font-geist: "Geist Mono", monospace;
+  --font-body: "TX-02", monospace;
 }
 
 :root {
@@ -55,7 +207,7 @@ body {
   min-height: 100vh;
   background: var(--color-paper-bg);
   color: var(--color-paper-ink);
-  font-family: var(--font-geist);
+  font-family: var(--font-body);
   text-rendering: geometricPrecision;
 }
 
